@@ -14,18 +14,18 @@ const particlesOptions = {
       shadow: {
         enable: true,
         color: "#3CA9D1",
-        blur: 5
+        blur: 4
       }
     },
     number: {
-      value: 140,
+      value: 100,
       density:{
         enable: true,
-        value_area: 600
+        value_area: 1000
       }
     },
     move: {
-      speed:2
+      speed:3
     }
   },
   interactivity: {
@@ -43,10 +43,12 @@ class App extends Component {
     return (
       <div className="App">
         <Particles classname='particles' params={particlesOptions}/>
-        <Navigation />
-        <Logo />
-        <Rank className='rank1'/>
-        <ImageLinkForm />
+        <div className='test'>
+          <Navigation />
+          <Logo />
+          <Rank />
+          <ImageLinkForm />
+        </div>
         
         {/* <FaceRecognition /> */}
       </div>
