@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/face-recognition/static/css/main.c4ad637d.chunk.css",
-    "main.js": "/face-recognition/static/js/main.da90ed48.chunk.js",
-    "main.js.map": "/face-recognition/static/js/main.da90ed48.chunk.js.map",
+    "main.css": "/face-recognition/static/css/main.d1711b40.chunk.css",
+    "main.js": "/face-recognition/static/js/main.cc6151c0.chunk.js",
+    "main.js.map": "/face-recognition/static/js/main.cc6151c0.chunk.js.map",
     "runtime-main.js": "/face-recognition/static/js/runtime-main.5b3babd5.js",
     "runtime-main.js.map": "/face-recognition/static/js/runtime-main.5b3babd5.js.map",
     "static/css/2.eb45ad44.chunk.css": "/face-recognition/static/css/2.eb45ad44.chunk.css",
-    "static/js/2.cbd1549c.chunk.js": "/face-recognition/static/js/2.cbd1549c.chunk.js",
-    "static/js/2.cbd1549c.chunk.js.map": "/face-recognition/static/js/2.cbd1549c.chunk.js.map",
+    "static/js/2.b8a0b817.chunk.js": "/face-recognition/static/js/2.b8a0b817.chunk.js",
+    "static/js/2.b8a0b817.chunk.js.map": "/face-recognition/static/js/2.b8a0b817.chunk.js.map",
     "index.html": "/face-recognition/index.html",
-    "precache-manifest.9c5af1b250544a8ccb30b5a9706385fb.js": "/face-recognition/precache-manifest.9c5af1b250544a8ccb30b5a9706385fb.js",
+    "precache-manifest.a80f683e655f1e9618f8456511dc63c7.js": "/face-recognition/precache-manifest.a80f683e655f1e9618f8456511dc63c7.js",
     "service-worker.js": "/face-recognition/service-worker.js",
     "static/css/2.eb45ad44.chunk.css.map": "/face-recognition/static/css/2.eb45ad44.chunk.css.map",
-    "static/css/main.c4ad637d.chunk.css.map": "/face-recognition/static/css/main.c4ad637d.chunk.css.map",
-    "static/js/2.cbd1549c.chunk.js.LICENSE.txt": "/face-recognition/static/js/2.cbd1549c.chunk.js.LICENSE.txt",
+    "static/css/main.d1711b40.chunk.css.map": "/face-recognition/static/css/main.d1711b40.chunk.css.map",
+    "static/js/2.b8a0b817.chunk.js.LICENSE.txt": "/face-recognition/static/js/2.b8a0b817.chunk.js.LICENSE.txt",
     "static/media/LogoImage.png": "/face-recognition/static/media/LogoImage.23055e65.png"
   },
   "entrypoints": [
     "static/js/runtime-main.5b3babd5.js",
     "static/css/2.eb45ad44.chunk.css",
-    "static/js/2.cbd1549c.chunk.js",
-    "static/css/main.c4ad637d.chunk.css",
-    "static/js/main.da90ed48.chunk.js"
+    "static/js/2.b8a0b817.chunk.js",
+    "static/css/main.d1711b40.chunk.css",
+    "static/js/main.cc6151c0.chunk.js"
   ]
 }
