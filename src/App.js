@@ -11,6 +11,8 @@ import Clarifai from 'clarifai';
 import FaceRecognition from './Components/FaceRecognition/FaceRecognition'
 import Register from './Components/Register/Register';
 
+
+
 const app = new Clarifai.App({
   apiKey: '308c0465acc8444881aeb17341641f49'
  });
@@ -52,8 +54,25 @@ class App extends Component {
       imageURL: '',
       box: {},
       route: 'signin',
-      isSignedIn: false
+      isSignedIn: false,
+      user: {
+        id:'',
+        email: '',
+        name: '',
+        entries: 0,
+        joined: ''
+      }
     }
+  }
+
+  loadUser = (data) => {
+    this.setState({user: {
+        id:data.id,
+        email: data.email,
+        name: data.name,
+        entries: data.entries,
+        joined: data.joined
+    }})
   }
 
   calculateFaceLocation = (data) => {
@@ -84,7 +103,24 @@ class App extends Component {
       .predict(
         Clarifai.FACE_DETECT_MODEL, 
         this.state.input)
-      .then(response => this.displayFaceBox(this.calculateFaceLocation(response)))
+      .then(response => {
+        if(response){
+          fetch('http://localhost:3001/image', {
+            method: 'put',
+            headers: {'Content-Type': 'application/json'},
+            body:JSON.stringify({
+                id: this.state.user.id   
+            })
+          })
+          .then(response => response.json())
+          .then(count => {
+            this.setState(Object.assign(
+              this.state.user, {entries: count}
+            ))
+          })
+        }
+        this.displayFaceBox(this.calculateFaceLocation(response))
+      })
       .catch(err => console.log(err));
   }
 
@@ -112,7 +148,7 @@ class App extends Component {
             route === 'home' 
             ? <div>
                 <Logo className='component' />
-                <Rank className='component' />
+                <Rank name={this.state.user.name} entries={this.state.user.entries} className='component' />
                 <ImageLinkForm 
                   className='component'
                   onInputChange={this.onInputChange} 
@@ -124,8 +160,8 @@ class App extends Component {
               </div> 
             : (
               route === 'signin'
-              ? <Signin className='component' onRouteChange={this.onRouteChange}/>
-              : <Register className='component' onRouteChange={this.onRouteChange}/> 
+              ? <Signin loadUser={this.loadUser} className='component' onRouteChange={this.onRouteChange}/>
+              : <Register loadUser={this.loadUser} className='component' onRouteChange={this.onRouteChange}/> 
               )                       
           }
       </div>
